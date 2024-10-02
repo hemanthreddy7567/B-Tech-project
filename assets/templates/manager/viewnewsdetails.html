@@ -1,0 +1,106 @@
+{% extends 'managerbase.html' %}
+{% load static %}
+<head>
+  <title>Medical</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+{% block contents %}
+  <!--<ul class="cd-hero-slider">
+
+            <li class="selected">
+              <div class="heading">
+                <h1>Design and Implementation of Domestic News Collection System Based on Python</h1>
+                <!--<span>Design and Implementation of Domestic News Collection System Based on Python</span>-->
+              <!--</div>
+              <div class="cd-full-width first-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content first-content">
+                        <h4>Abstract</h4>
+
+                        <p>In the era of rapid development of the Internet, network media has become a new window for people to understand the outside world due to its fast speed and wide spread. News is a channel for people to know about Surrounding Information, but thousands of news are produced every day on the Internet. These news are needed or not in inside. How to efficiently and accurately obtain the news content we need from the website is a great need in people's life. This system aims to collect news on specific websites and return it to users with concise and clear pages. Users can search specific keywords to select news that they are interested in so as to realize personalization for users. This system crawls and processes the domestic financial news content, which is convenient for people to process the information. In order to avoid duplication of information, the system has also implemented a self-defined deduplication rule. In the specific implementation, the system is written using Python in conjunction with the Scrapy  ramework and Django framework, which can simplify the system code to a certain extent. The practical value of this system lies in the timely, efficient and convenient access to domestic financial news that people care about, need and are interested in.</p>
+                        <div class="primary-button">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>-->
+    <li>
+              <div class="heading">
+                <h1>Manager view the details..</h1>
+                <!--<span>Design and Implementation of Domestic News Collection System Based on Python</span>-->
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content second-content">
+                        <div class="row">
+                          <div class="col-md-4 left-image">
+                            <img src="{% static 'img/Manager.jpg' %}">
+                          </div>
+                          <div class="col-md-6">
+                            <div class="right-about-text">
+                              <h4>News details</h4>
+                            <!-- <form action="{% url 'viewdetails' %}" method="POST" enctype="multipart/form-data"  >
+    {% csrf_token %}-->
+        <table align="center" style="margin-top:10px;">
+                    <tr>
+
+                        <td colspan="3" align="center">
+                            <img src="{{image.url}}" style="width:25em;height:10em;">
+
+                        </td>
+                        <!--<tr><td style="color:black">Category</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{adds.file}}</td></tr>-->
+                        <tr><td style="color:black">category</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.category}}</td></tr>
+                        <tr><td style="color:black">Title</td>
+                        <td style="color:black">:</td>
+                            <td height="30px" style="color:black">{{news.title}}</td></tr>
+                        <tr><td style="color:black">description</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.description}}</td></tr>
+                        <tr><td style="color:black">location</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.location}}</td></tr>
+
+                    </tr>
+
+
+                </table>
+                              <div class="primary-button">
+                                <!--<a href="#">Discover More</a>-->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                          <!--<div class="col-md-5 right-image">
+                            <img src="img/right-about-image.jpg">
+                          </div>-->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+{% endblock %}
+</body>
+</html>

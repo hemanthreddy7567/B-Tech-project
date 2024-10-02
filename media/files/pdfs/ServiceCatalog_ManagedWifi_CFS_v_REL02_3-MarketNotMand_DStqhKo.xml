@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ServiceCatalog>
+   <FileName>ServiceCatalog_ManagedWifi_CFS_v_REL02_3-MarketNotMand.xml</FileName>
+   <serviceCharacteristic>
+      <Name>Market</Name>
+      <Type>AttributeSpecification</Type>
+      <valueType>string</valueType>
+   </serviceCharacteristic>
+   <serviceCharacteristic>
+      <Name>ModemSerialNumber</Name>
+      <Type>AttributeSpecification</Type>
+      <valueType>string</valueType>
+   </serviceCharacteristic>
+   <serviceCharacteristic>
+      <Name>ModemType</Name>
+      <Type>AttributeSpecification</Type>
+      <valueType>string</valueType>
+   </serviceCharacteristic>
+   <serviceCharacteristic>
+      <Name>Pod</Name>
+      <Type>FeatureSpecification</Type>
+      <valueType>group</valueType>
+   </serviceCharacteristic>
+</ServiceCatalog>

@@ -1,0 +1,56 @@
+{% extends 'base.html'%}
+{% load static %}
+{% block contents %}
+
+ <li>
+              <div class="heading">
+                <h1>User Login</h1>
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content second-content">
+                        <div class="row">
+                          <div class="col-md-5 left-image">
+                            <img src="{% static 'img/login.jpg' %}">
+                          </div>
+                          <div class="col-md-5">
+                            <div class="right-about-text">
+                              <h4>user login</h4>
+                                <form action="{% url 'userlogincheck' %} " method="POST">
+                                 {% csrf_token %}
+                                <table><tr><td style="color:blue">
+                                <input  type="text" name="uname" placeholder="USER Login" ><br/><br/>
+<!--                                    <input type="email" name="email" class="form-control"  placeholder="Email">-->
+                                 <input  type="password" name="upasswd" placeholder="Password" ><br/><br/>
+                                    </td></tr></table> <input type="submit" style="color:#FF4500" value="submit"><br/>
+
+                            </form> </h3>
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <font color='darkred'> {{ message }}</font>
+                                {% endfor %}
+                            {% endif %}
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-7">
+                            <div class="left-about-text">
+                              <h4>New User Register Here ?</h4>
+                              <a href="{% url 'userregister' %}" style="color:blue">Click Here</a>
+
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+{% endblock %}

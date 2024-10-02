@@ -1,0 +1,64 @@
+{% extends 'userbase.html'%}
+{% load static %}
+{% block contents %}
+
+ <li>
+              <div class="heading">
+                <h1>User view News..</h1>
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content second-content">
+                        <div class="row">
+                          <div class="col-md-5 left-image">
+                            <img src="{% static 'img/collecting.jpg' %}">
+                          </div>
+                          <div class="col-md-5">
+                            <div class="right-about-text">
+                              <form action="{% url 'userviewdetails' %}" method="POST" enctype="multipart/form-data"  >
+    {% csrf_token %}
+        <table align="center" style="margin-top:10px;">
+                    <tr>
+
+                        <td colspan="3" align="center">
+                            <img src="{{image.url}}" style="width:25em;height:10em;">
+
+                        </td>
+
+                        <tr><td style="color:black">category</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.category}}</td></tr>
+                        <tr><td style="color:black">title</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.title}}</td></tr>
+                        <tr><td style="color:black">description</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.description}}</td></tr>
+                        <tr><td style="color:black">location</td>
+                        <td style="color:black">:</td>
+                        <td height="30px" style="color:black">{{news.location}}</td></tr>
+
+                        <tr><td style="color:black">Review</td>
+                        <td style="color:black">:</td>
+                         <td height="30px" style="color:black">{{news.review}}</td></tr>
+                    </tr>
+            <tr>
+        <td  align="center"><input style="color:Black" type="submit" name="submit"  ></td>
+    </tr>
+                </table>
+                            </div>
+                          </div>
+                        </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+{% endblock %}

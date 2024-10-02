@@ -1,0 +1,139 @@
+{% extends 'managerbase.html' %}
+{% load static %}
+<head>
+  <title>Medical</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+{% block contents %}
+
+  <!--<ul class="cd-hero-slider">
+
+            <li class="selected">
+              <div class="heading">
+                <h1>Design and Implementation of Domestic News Collection System Based on Python</h1>
+                <!--<span>Design and Implementation of Domestic News Collection System Based on Python</span>-->
+              <!--</div>
+              <div class="cd-full-width first-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-122">
+                      <div class="content first-content">
+                        <h4>view News</h4>
+
+                        <br><br><br><br><h3 style="color:white">View Upload news:</h3>
+                   <div class="col-sm-4" style="background-color:;border:;">
+
+        <table align="center" style="margin-top:10px;">
+                        <thead>
+                          <tr style="color:White">
+                            <th>Image</th>
+                            <th>category</th>
+                            <th>title</th>
+                            <th>file</th>
+                            <th>description</th>
+                            <th>location</th>
+                            <th>delete</th>
+
+                          </tr>
+                        </thead>
+
+                        {% for i in news %}
+                            <tr style="color:Black">
+            <td><img src="{{i.file.url}}" style="width:10em;height:10em;"></td>
+                                <td>{{i.category}}</td>
+                                <td>{{i.title}}</td>
+                                <td>{{i.file}}</td>
+                                <td>{{i.description}}</td>
+                                <td>{{i.location}}</td>
+                                <td class="cta" > <a href="/dlt/?usid={{i.id}}" class="nav-link" style="color:black"><span>delete</span></a></td>
+
+
+                            </tr>
+                            {% endfor %}
+                    </table>
+
+
+                          <div class="primary-button">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>-->
+    <li>
+              <div class="heading">
+                <h1>Manager view news..</h1>
+                <!--<span>Design and Implementation of Domestic News Collection System Based on Python</span>-->
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-155">
+                      <div class="content second-content">
+                        <div class="row">
+
+                          <div class="col-md-6">
+                            <div class="right-about-text">
+
+                   <div class="col-sm-4" style="background-color:;border:;">
+                       <h4>Upload news</h4>
+                    <!--<table border="2px solid blue" align="center">
+                                  <tr><th style="color:red">Image</th>
+                                    <th style="color:red">category</th>
+                                    <th style="color:red">title</th>
+                                    <th style="color:red">file</th>
+                                    <th style="color:red">description</th>
+                                    <th style="color:red">location</th>
+                                    <th style="color:red">Delete</th>
+
+                                  </tr>
+
+                              {% for x in news %}
+                                  <tr>
+                                      <td><img src="{{x.file.url}}" style="width:10em;height:10em;"></td>
+                                    <td>{{x.category}}</td>
+                                    <td>{{x.title}}</td>
+                                    <td>{{x.file}}</td>
+                                    <td>{{x.description}}</td>
+                                    <td>{{x.location}}</td>
+                                      <td class="cta" > <a href="/dlt/?usid={{i.id}}" class="nav-link" style="color:black"><span>delete</span></a></td>
+                                  </tr>
+                                {% endfor %}
+                              </table>-->
+                       {% for news in news %}
+                       <a href="/viewdetails/?id={{news.id}}&category={{news.category}}&title={{news.title}}&file={{news.file}}&description={{news.description}}&location={{news.location}}"><img src="{{news.file.url}}" style="width:25em;height:10em;">{{news.title}}<a href="{% url 'newsdelete' %}?id={{news.id}}&title={{news.title}}"><h6 style="color:red">Delete</h6></a><br><br><br></a>
+
+                              {% endfor %}
+
+                       <div class="primary-button">
+
+                                <!--<a href="#">Discover More</a>-->
+                              <!--</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+                          <!--<div class="col-md-5 right-image">
+                            <img src="img/right-about-image.jpg">
+                          </div>-->
+                       <!-- </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>-->
+
+{% endblock %}
+</body>
+</html>

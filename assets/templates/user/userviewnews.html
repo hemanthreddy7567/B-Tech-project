@@ -1,0 +1,51 @@
+{% extends 'userbase.html' %}
+{% load static %}
+<head>
+  <title>Medical</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+</head>
+
+<body>
+{% block contents %}
+
+    <li>
+              <div class="heading">
+                <h1>User View news..</h1>
+                <!--<span>Design and Implementation of Domestic News Collection System Based on Python</span>-->
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-155">
+                      <div class="content second-content">
+                        <div class="row">
+
+                          <div class="col-md-6">
+                            <div class="right-about-text">
+
+                   <div class="col-sm-4" style="background-color:;border:;">
+                       <h4>View News</h4>
+        <form method="GET" action="{% url 'usersearchresult' %}">
+            {% csrf_token %}
+            <table style="width:30%">
+
+                    <td><input type="text"  name="title"> </td>
+                    <td><input type="submit" value="Search"></td><br>
+                     <!--<P>we can search based upon title</P>-->
+                 </tr>
+            </table>
+
+                            </form>
+                       {% for news in news %}
+                       <a href="/userviewdetails/?id={{news.id}}&category={{news.category}}&title={{news.title}}&file={{news.file}}&description={{news.description}}&location={{news.location}}"><img src="{{news.file.url}}" style="width:25em;height:10em;">{{news.title}}<a href="{{news.file.url }}" class="btn btn-primary btn-sm" target="_blank">Download</h6></a><br><br><br></a>
+                       <a href="/viewdetails/?id={{news.id}}&category={{news.category}}&title={{news.title}}&file={{news.file}}&description={{news.description}}&location={{news.location}}"><img src="{{news.file.url}}" style="width:25em;height:10em;">{{news.title}}<a href="{% url 'newsdelete' %}?id={{news.id}}&title={{news.title}}"><h6 style="color:red">Delete</h6></a><br><br><br></a>
+
+                              {% endfor %}<div class="primary-button">
+
+
+{% endblock %}
+</body>
+</html>

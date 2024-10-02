@@ -1,0 +1,43 @@
+{% extends 'userbase.html'%}
+{% load static %}
+{% block contents %}
+
+ <li>
+              <div class="heading">
+                <h1></h1>
+              </div>
+              <div class="cd-half-width second-slide">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="content second-content">
+                        <div class="row">
+                          <div class="col-md-5 left-image">
+                            <img src="{% static 'img/collecting.jpg' %}">
+                          </div>
+                          <div class="col-md-5">
+                            <div class="right-about-text">
+
+                                 {% for news in news %}
+                       <a href="/userviewdetails/?id={{news.id}}&category={{news.category}}&title={{news.title}}&file={{news.file}}&description={{news.description}}&location={{news.location}}"><img src="{{news.file.url}}" style="width:25em;height:10em;">{{news.title}}<br><br><br></a>
+                              {% endfor %}
+                                {% if messages %}
+                                {% for message in messages %}
+                                    <font color='darkred'> {{ message }}</font>
+                                {% endfor %}
+                            {% endif %}
+
+                            </div>
+                          </div>
+                        </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+{% endblock %}
